@@ -34,7 +34,6 @@ public class ImageController {
     @PostMapping("/create")
     public String createImage(String content) throws JsonProcessingException {
         String url="https://api.kakaobrain.com/v2/inference/karlo/t2i";
-        // REST API 키 :  72a3c2462f8bf6a9fc2b9c2f3daffb33
         // HEADER에 담길 것들
         // Authorization: KakaoAK ${REST_API_KEY}
         // Content-Type: application/json
