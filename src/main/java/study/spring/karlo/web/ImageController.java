@@ -33,6 +33,7 @@ public class ImageController {
 
     @PostMapping("/create")
     public String createImage(String content) throws JsonProcessingException {
+        // 카카오가 제시한 요청 uri
         String url="https://api.kakaobrain.com/v2/inference/karlo/t2i";
         // HEADER에 담길 것들
         // Authorization: KakaoAK ${REST_API_KEY}
@@ -64,8 +65,6 @@ public class ImageController {
         ObjectMapper objectMapper1 = new ObjectMapper();
         KarloResponse response1 = objectMapper1.readValue(response.getBody(), KarloResponse.class);
         log.info("imageObjectMapper={}", response1.getImages().get(0).getImage());
-
-
 
         return "";
     }
